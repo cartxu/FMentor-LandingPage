@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    
+    font-family: 'Open Sans', sans-serif;
+    background-color: hsl(257, 40%, 49%);
+    background-image: url("images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #FFF;
+    height:100vh;
+    margin:0;
+    padding: 0;
+    font-size: 1.6rem;
+    
+}
+
+html {
+    font-size: 62.5%; /* Reset para REMs - 62.5% = 10px de 16px */  
+}
+
+@media (max-width:600px) {
+    body {
+        background-image: url("images/bg-mobile.svg");
+        
+    }
+}
+
+
+
+.contenedor {
+    
+    padding: 7rem;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 75% 10%;
+    grid-gap: 2%;
+    grid-template-areas: "logo      logo"
+                         "imagen    texto"
+                         "imagen    footer";
+}
+
+@media (max-width:600px) {
+    .contenedor {
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column; 
+    }
+}
+
+.logo {
+    grid-row: logo;
+    grid-column: logo;
+    
+}
+
+.logo img {
+    width: 17.55rem;
+    
+}
+
+@media (max-width:600px) {
+
+    .logo img{
+        width: 10rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.text {
+    grid-column: texto;
+    grid-row: texto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@media (max-width:600px) {
+
+    .text {
+        text-align: center;
+    }
+}
+
+.text button {
+    padding: 1.2rem 5rem;
+    border-radius: 3rem;
+    border: none;
+    box-shadow: 2px 2px 2px #00000050;
+    color: hsl(257, 40%, 49%);
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.text button:hover {
+    color:#fff;
+    background-color: hsl(300, 69%, 71%);
+
+    
+
+}
+.desc {
+    width: 80%;
+    margin-left: 3rem;
+}
+
+.ilustration {
+    
+    grid-row: imagen;
+    grid-column: imagen;
+   
+}
+
+.ilustration img {
+    width: 100%;
+    
+}
+
+.footer {
+    grid-column: footer;
+    grid-row: footer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width:600px) {
+
+    .footer {
+        justify-content: center;
+    }
+}
+
+.fab {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.fab:hover {
+    color:hsl(300, 69%, 71%);
+    border: 1px solid hsl(300, 69%, 71%);
+}
+
+.fb {
+    padding: 1rem 1.3rem;
+}
+
+
+
+
