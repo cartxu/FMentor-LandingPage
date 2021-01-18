@@ -98,6 +98,7 @@ html {
     color: hsl(257, 40%, 49%);
     font-weight: 600;
     cursor: pointer;
+    outline: none;
 
 }
 
